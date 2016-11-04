@@ -24,13 +24,13 @@
     <include layout="@layout/content_main" />
 
     <android.support.design.widget.FloatingActionButton
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_menu_send"
         android:id="@+id/floatingActionButton2"
-        app:layout_anchorGravity="bottom|right"
-        android:layout_gravity="top|left" />
+        android:layout_gravity="bottom|right"
+        app:layout_anchorGravity="center_vertical|center_horizontal" />
 
 </android.support.design.widget.CoordinatorLayout>
