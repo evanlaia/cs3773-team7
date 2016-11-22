@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import com.google.firebase.database.DatabaseReference;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+//        if(FirebaseAuth.getInstance().getCurrentUser() == null) {
+//            // Start sign in/sign up activity
+//            startActivityForResult(
+//                    AuthUI.getInstance()
+//                            .createSignInIntentBuilder()
+//                            .build(),
+//                    SIGN_IN_REQUEST_CODE
+//            );
+//        } else {
+//            // User is already signed in. Therefore, display
+//            // a welcome Toast
+//            Toast.makeText(this,
+//                    "Welcome " + FirebaseAuth.getInstance()
+//                            .getCurrentUser()
+//                            .getDisplayName(),
+//                    Toast.LENGTH_LONG)
+//                    .show();
+//
+//            // Load chat room contents
+//            displayChatMessages();
+//        }
 
 
     }
@@ -43,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void displayChatMessages() {
 
+    }
 
 }
