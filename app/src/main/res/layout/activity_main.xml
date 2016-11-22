@@ -40,7 +40,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="245dp"
+            android:layout_height="205dp"
             android:hint="hint" />
     </android.support.design.widget.TextInputLayout>
 
