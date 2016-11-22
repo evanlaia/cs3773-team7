@@ -34,19 +34,18 @@
         app:layout_anchorGravity="center_vertical|center_horizontal" />
 
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="212dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:hint="hint" />
+    </android.support.design.widget.TextInputLayout>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint" />
-    </android.support.design.widget.TextInputLayout>
 
 </android.support.design.widget.CoordinatorLayout>
