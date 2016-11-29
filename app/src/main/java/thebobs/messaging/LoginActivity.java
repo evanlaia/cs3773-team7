@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private EditText loginInputEmail, loginInputPassword;
     private TextInputLayout loginInputLayoutEmail, loginInputLayoutPassword;
+    private int count = 0;
 
 
     @Override
@@ -89,10 +90,18 @@ public class LoginActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.GONE);
                         if (!task.isSuccessful()) {
                             // there was an error
+                            count ++;
+
+                            if (count >= 3){
+                                Toast.makeText(LoginActivity.this, "Max login attempts ", Toast.LENGTH_LONG).show();
+                                finish();
+                            }
                             Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
 
+
                         } else {
-                            Intent intent = new Intent(LoginActivity.this, UserActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, user2.class);
+//                            Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                             startActivity(intent);
                             finish();
                         }
