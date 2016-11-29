@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "646512256155",
+    "firebase_url": "https://p23773-97238.firebaseio.com",
+    "project_id": "p23773-97238",
+    "storage_bucket": "p23773-97238.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646512256155:android:c43af9f075381183",
+        "android_client_info": {
+          "package_name": "thebobs.messaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646512256155-qb6f7kial7lao0nuae036gbj3f4q07bc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "thebobs.messaging",
+            "certificate_hash": "C0A1442D5A72C474D4CEFAF616898DABE180AC75"
+          }
+        },
+        {
+          "client_id": "646512256155-hjuorba9u2oe2nrahiq51iako79kae73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNogPp268UA68T5UmrTdgpMC24W-pjlfk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646512256155-hjuorba9u2oe2nrahiq51iako79kae73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
