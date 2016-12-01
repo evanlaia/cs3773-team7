@@ -29,6 +29,9 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
+        <activity
+            android:name=".ResetActivity"
+            android:label="Reset Password" />
         <activity android:name=".user2"></activity>
     </application>
 

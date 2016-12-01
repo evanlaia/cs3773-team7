@@ -27,5 +27,8 @@
     <string name="err_msg_required">Required !!</string>
     <string name="err_msg_password">Enter a valid password with min 6 characters.</string>
     <string name="btn_link_to_signup">Don\'t have an account, Signup !!</string>
+    <string name="btn_link_to_reset">Forgot your password?</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_back">back</string>
 
 </resources>

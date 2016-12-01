@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             signUpButton = (Button) findViewById(R.id.btn_signup);
             btnLinkToLogIn = (Button) findViewById(R.id.btn_link_login);
 
-
             signUpButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

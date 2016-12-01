@@ -5,6 +5,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp" >
+
     <android.support.design.widget.TextInputLayout
         android:id="@+id/login_input_layout_email"
         android:layout_width="match_parent"
@@ -33,6 +34,7 @@
             android:inputType="textPassword"
             android:hint="@string/hint_password" />
     </android.support.design.widget.TextInputLayout>
+
     <Button android:id="@+id/btn_login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -40,6 +42,7 @@
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="40dp"
         android:textColor="@android:color/white"/>
+
     <Button android:id="@+id/btn_link_signup"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -47,6 +50,16 @@
         android:background="@android:color/transparent"
         android:layout_marginTop="10dp"
         android:textColor="@color/colorPrimaryDark"/>
+
+    <Button
+        android:id="@+id/btn_link_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_link_to_reset"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimaryDark" />
+
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

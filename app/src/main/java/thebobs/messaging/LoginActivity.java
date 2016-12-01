@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private static final String TAG = "LoginActivity";
-    private Button btnLogin, btnLinkToSignUp;
+    private Button btnLogin, btnLinkToSignUp, btnLinkToReset;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     private EditText loginInputEmail, loginInputPassword;
@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
 
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnLinkToSignUp = (Button) findViewById(R.id.btn_link_signup);
+        btnLinkToReset = (Button) findViewById(R.id.btn_link_reset);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +58,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(thebobs.messaging.LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLinkToReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(thebobs.messaging.LoginActivity.this, ResetActivity.class);
                 startActivity(intent);
             }
         });
