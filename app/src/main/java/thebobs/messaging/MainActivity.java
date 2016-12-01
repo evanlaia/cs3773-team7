@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG,"Authentication failed." + task.getException());
 
                         } else {
-                            startActivity(new Intent(MainActivity.this, UserActivity.class));
+                            startActivity(new Intent(MainActivity.this, user2.class));
                             finish();
                         }
                     }
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private static boolean isPasswordValid(String password){
-        return (password.length() >= 6);
+        return (password.length() >= 16);
     }
 
     private void requestFocus(View view) {

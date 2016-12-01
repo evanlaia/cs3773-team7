@@ -96,12 +96,13 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Max login attempts ", Toast.LENGTH_LONG).show();
                                 finish();
                             }
-                            Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
+                            else{
+                                Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
+                            }
 
 
                         } else {
                             Intent intent = new Intent(LoginActivity.this, user2.class);
-//                            Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                             startActivity(intent);
                             finish();
                         }
