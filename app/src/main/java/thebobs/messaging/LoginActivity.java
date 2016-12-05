@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin, btnLinkToSignUp, btnLinkToReset;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
+    private FirebaseUser user;
     private EditText loginInputEmail, loginInputPassword;
     private TextInputLayout loginInputLayoutEmail, loginInputLayoutPassword;
     private int count = 0;
@@ -35,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
         auth = FirebaseAuth.getInstance();
+//        user = auth.getCurrentUser();
 
         loginInputLayoutEmail = (TextInputLayout) findViewById(R.id.login_input_layout_email);
         loginInputLayoutPassword = (TextInputLayout) findViewById(R.id.login_input_layout_password);

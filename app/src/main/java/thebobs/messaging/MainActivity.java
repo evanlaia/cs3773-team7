@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
 
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Button signUpButton,btnLinkToLogIn;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
+    private FirebaseUser user;
     private EditText signupInputEmail, signupInputPassword;
     private TextInputLayout  signupInputLayoutEmail, signupInputLayoutPassword;
     @Override
@@ -42,8 +44,13 @@ public class MainActivity extends AppCompatActivity {
             mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
             auth = FirebaseAuth.getInstance();
+            user = auth.getCurrentUser();
+        if(user!= null){
+               startActivity(new Intent(MainActivity.this, user2.class));
+              finish(); }
 
-            signupInputLayoutEmail = (TextInputLayout) findViewById(R.id.signup_input_layout_email);
+
+        signupInputLayoutEmail = (TextInputLayout) findViewById(R.id.signup_input_layout_email);
             signupInputLayoutPassword = (TextInputLayout) findViewById(R.id.signup_input_layout_password);
             progressBar = (ProgressBar) findViewById(R.id.progressBar);
             signupInputEmail = (EditText) findViewById(R.id.signup_input_email);

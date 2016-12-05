@@ -38,13 +38,15 @@
         <!--This name needs to be changed to something else-->
 
         <service
-            android:name=".MyFirebaseMessagingService">
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
         <service
-            android:name=".MyFirebaseInstanceIdService">
+            android:name=".MyFirebaseInstanceIdService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
