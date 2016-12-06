@@ -1,5 +1,5 @@
 package thebobs.messaging;
-
+//This handles login when user already has an account
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                         } else {
-                            Intent intent = new Intent(LoginActivity.this, user2.class);
+                            Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
                             startActivity(intent);
                             finish();
                         }

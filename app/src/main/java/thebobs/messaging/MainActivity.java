@@ -1,13 +1,8 @@
 package thebobs.messaging;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.EditText;
@@ -25,12 +20,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
 
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAnalytics mFirebaseAnalytics;
     private static final String TAG = "SignupActivity" ;
+
     private Button signUpButton,btnLinkToLogIn;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
@@ -46,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             auth = FirebaseAuth.getInstance();
             user = auth.getCurrentUser();
         if(user!= null){
-               startActivity(new Intent(MainActivity.this, user2.class));
+               startActivity(new Intent(MainActivity.this, ChatActivity.class));
               finish(); }
 
 
@@ -106,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG,"Authentication failed." + task.getException());
 
                         } else {
-                            startActivity(new Intent(MainActivity.this, user2.class));
+                            startActivity(new Intent(MainActivity.this, ChatActivity.class));
                             finish();
                         }
                     }
@@ -162,8 +157,6 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         progressBar.setVisibility(View.GONE);
     }
-
-
 
 
 //    @Override

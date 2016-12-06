@@ -34,7 +34,7 @@
         <activity
             android:name=".ResetActivity"
             android:label="Reset Password" />
-        <activity android:name=".user2"></activity>
+        <activity android:name=".ChatActivity"></activity>
         <!--This name needs to be changed to something else-->
 
         <service
