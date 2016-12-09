@@ -30,6 +30,7 @@ public class ChatActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference();
 
 
+
        // myRef.setValue(value);
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
