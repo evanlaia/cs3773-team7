@@ -18,14 +18,15 @@ public class ChatActivity extends AppCompatActivity {
     private DatabaseReference FireBaseDataBase;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         textView = (TextView)findViewById(R.id.textView1);
-
-
         textView.setText("This is the user activity");
+
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 
@@ -47,11 +48,12 @@ public class ChatActivity extends AppCompatActivity {
 
                 Map<String, Object> newPost = (Map<String, Object>) dataSnapshot.getValue();
                 List<String> lst = new ArrayList<String>();
-                List<String>  textlist = new ArrayList<String>();// Result will be holded Here
+               // Result will be holded Here
                 for(DataSnapshot dsp : dataSnapshot.getChildren()){
                     lst.add(String.valueOf(dsp.getKey())); //add result into array list
 
                 }
+
                 Log.d("lisrrtertetertt",lst.toString());
                 String childName="";
 
@@ -66,24 +68,6 @@ public class ChatActivity extends AppCompatActivity {
 
             }
 
-
-            private void collectPhoneNumbers(Map<String,Object> users) {
-
-                ArrayList<String> phoneNumbers = new ArrayList<String>();
-
-                //iterate through each user, ignoring their UID
-                for (Map.Entry<String, Object> entry : users.entrySet()){
-
-                    //Get user map
-                    Map singleUser = (Map) entry.getValue();
-                    //Get phone field and append to list
-                    phoneNumbers.add((String)singleUser.get("text"));
-                    System.out.println("cat!!!!!!!!!!!!!!!!!"+phoneNumbers);
-                    Log.d("lissta", phoneNumbers.toString());
-                }
-
-                System.out.println("cat"+phoneNumbers.toString());
-            }
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value
@@ -93,9 +77,21 @@ public class ChatActivity extends AppCompatActivity {
             // Retrieve new posts as they are added to Firebase
             @Override
             public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
+                textView = (TextView)findViewById(R.id.textView1);
+
+                List<String>  textlist = new ArrayList<String>();
                 Map<String, Object> newPost = (Map<String, Object>) snapshot.getValue();
                 System.out.println("Author: " + newPost.get("name"));
                 System.out.println("Message: " + newPost.get("text"));
+                textlist.add(String.valueOf(newPost.get("text")));
+                String print = "";
+                for(String s : textlist) {
+                    print += s;
+                }
+
+                textView.setText("BIRnnnnD MAN JR "+print);
+
+               // Toast.makeText(getApplicationContext(), (String) newPost.get("text"), Toast.LENGTH_LONG).show();
             }
 
             @Override
