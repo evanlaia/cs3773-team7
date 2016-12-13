@@ -87,9 +87,10 @@ public class ChatActivity extends AppCompatActivity {
                 String print = "";
                 for(String s : textlist) {
                     print += s;
+
                 }
 
-                textView.setText("BIRnnnnD MAN JR "+print);
+                textView.setText("Message Contents: "+print);
 
                // Toast.makeText(getApplicationContext(), (String) newPost.get("text"), Toast.LENGTH_LONG).show();
             }
