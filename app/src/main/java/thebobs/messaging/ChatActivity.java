@@ -9,8 +9,11 @@ import android.widget.TextView;
 import com.google.firebase.database.*;
 import android.util.*;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
+
 import android.widget.Toast;
 
+import static java.util.concurrent.TimeUnit.*;
 
 
 public class ChatActivity extends AppCompatActivity {
@@ -60,6 +63,13 @@ public class ChatActivity extends AppCompatActivity {
                 for(String data:lst){
 
                     textView.setText(data);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+//                    FireBaseDataBase.remove("-K2ib5JHRbbL0NrztUfO");
+
                 }
 
 
@@ -120,8 +130,6 @@ public class ChatActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
 
