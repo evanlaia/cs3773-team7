@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 public class ChatActivity extends AppCompatActivity {
     private TextView textView ;
+    private TextView textViews;
     private DatabaseReference FireBaseDataBase;
 
 
@@ -25,7 +26,8 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         textView = (TextView)findViewById(R.id.textView1);
         textView.setText("This is the user activity");
-
+       //textViews = (TextView)findViewById(R.id.textView2);
+        //textViews.setText("This adasdady");
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
@@ -59,7 +61,7 @@ public class ChatActivity extends AppCompatActivity {
 
                 for(String data:lst){
 
-                    textView.setText(data);
+                    //textView.setText(data);
                 }
 
 
@@ -78,19 +80,30 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
                 textView = (TextView)findViewById(R.id.textView1);
+               // textViews = (TextView)findViewById(R.id.textView2);
 
                 List<String>  textlist = new ArrayList<String>();
+                List<String>  msglist = new ArrayList<String>();
                 Map<String, Object> newPost = (Map<String, Object>) snapshot.getValue();
                 System.out.println("Author: " + newPost.get("name"));
                 System.out.println("Message: " + newPost.get("text"));
-                textlist.add(String.valueOf(newPost.get("text")));
+                textlist.add(String.valueOf(newPost.get("name")));
+                msglist.add(String.valueOf(newPost.get("text")));
                 String print = "";
+                String prints = "";
                 for(String s : textlist) {
                     print += s;
 
                 }
+                for(String s : msglist) {
+                    prints += s;
 
-                textView.setText("Message Contents: "+print);
+                }
+
+                textView.setText("Sender: "+print);
+                //textViews.setText(prints);
+
+
 
                // Toast.makeText(getApplicationContext(), (String) newPost.get("text"), Toast.LENGTH_LONG).show();
             }

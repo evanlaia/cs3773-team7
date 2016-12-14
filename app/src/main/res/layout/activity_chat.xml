@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_chat"
@@ -10,17 +11,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="thebobs.messaging.ChatActivity">
 
+
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="800px"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:text="@string/big_dick_message_thread"
+        android:id="@+id/textView2"
+        android:text="@string/messages"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textStyle="bold"
-        android:layout_marginTop="13dp"
-        android:textAlignment="center"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_gravity="left"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView1" />
+
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -28,7 +31,26 @@
         android:layout_height="match_parent"
         android:layout_marginTop="392dp"
         android:layout_below="@+id/textView1"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:text="@string/header"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="392dp"
+        android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true">
+
 
         <EditText android:id="@+id/edit_message"
             android:layout_width="245dp"
@@ -39,7 +61,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="98dp"
+            android:layout_height="wrap_content"
             android:text="SEND"
             android:id="@+id/button2"
             android:layout_alignParentBottom="true"
@@ -53,3 +75,4 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
+
