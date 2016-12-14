@@ -12,7 +12,7 @@ public class MessagesModel {
     public MessagesModel() {
     }
 
-    public MessagesModel(String text, String name, String photoUrl) {
+    public MessagesModel(String text, String name) {
         this.text = text;
         this.name = name;
     }
